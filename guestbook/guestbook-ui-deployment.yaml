@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: get-activated-offer-list
 spec:
   replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: get-activated-offer-list
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: get-activated-offer-list
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-        name: guestbook-ui
+        name: get-activated-offer-list
         ports:
         - containerPort: 80
