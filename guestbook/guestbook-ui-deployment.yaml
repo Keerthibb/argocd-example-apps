@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: get-activated-offer-list
 spec:
-  replicas: 2
+  replicas: 3
   revisionHistoryLimit: 3
   selector:
     matchLabels:
