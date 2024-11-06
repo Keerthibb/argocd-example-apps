@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: get-activated-offer-list
+  name: get-recommended-offer-list
 spec:
-  replicas: 0
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: get-activated-offer-list
+      app: get-recommended-offer-list
   template:
     metadata:
       labels:
-        app: get-activated-offer-list
+        app: get-recommended-offer-list
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-        name: get-activated-offer-list
+        name: get-recommended-offer-list
         ports:
         - containerPort: 80
